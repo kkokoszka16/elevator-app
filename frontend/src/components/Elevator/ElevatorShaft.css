@@ -1,0 +1,36 @@
+.elevator-shaft {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+}
+
+.shaft-header {
+  text-align: center;
+  padding: 10px 0;
+  background: #2a2a4a;
+  border-radius: 8px 8px 0 0;
+}
+
+.elevator-id {
+  font-weight: bold;
+  color: #4cc9f0;
+}
+
+.shaft-body {
+  position: relative;
+  width: 80px;
+  background: linear-gradient(180deg, #1a1a2e 0%, #0f0f23 100%);
+  border-left: 2px solid #2a2a4a;
+  border-right: 2px solid #2a2a4a;
+  border-bottom: 2px solid #2a2a4a;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.shaft-floor-marker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #2a2a4a;
+}

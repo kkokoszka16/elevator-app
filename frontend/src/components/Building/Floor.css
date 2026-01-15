@@ -1,0 +1,63 @@
+.floor {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.floor:first-child {
+  border-top: 1px solid #2a2a4a;
+}
+
+.floor-label {
+  width: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4cc9f0;
+  text-align: center;
+}
+
+.floor-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-left: 10px;
+}
+
+.call-button {
+  width: 32px;
+  height: 24px;
+  background: #2a2a4a;
+  color: #888;
+  border: 1px solid #3a3a5a;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.call-button:hover {
+  background: #3a3a5a;
+  color: #4cc9f0;
+  border-color: #4cc9f0;
+}
+
+.call-button:active {
+  background: #4cc9f0;
+  color: #1a1a2e;
+}
+
+.call-button .arrow {
+  font-size: 12px;
+}
+
+.call-button.up:hover {
+  box-shadow: 0 0 10px rgba(76, 201, 240, 0.3);
+}
+
+.call-button.down:hover {
+  box-shadow: 0 0 10px rgba(76, 201, 240, 0.3);
+}

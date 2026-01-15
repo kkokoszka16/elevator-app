@@ -1,0 +1,26 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: elevator-system-test
+
+elevator:
+  system:
+    default-floors: 10
+    default-elevators: 3
+    door-open-duration-seconds: 1
+    floor-travel-duration-seconds: 1
+    tick-interval-ms: 100
+    requests-per-minute: 1000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics
+
+logging:
+  level:
+    com.elevator: DEBUG
+    org.springframework: WARN
