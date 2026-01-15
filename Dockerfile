@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jdk-alpine AS builder
+FROM eclipse-temurin:25-jdk-alpine AS builder
 
 RUN apk add --no-cache curl
 
@@ -22,7 +22,7 @@ COPY elevator-bootstrap/src elevator-bootstrap/src
 
 RUN ./mvnw clean package -DskipTests -B
 
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:25-jre-alpine
 
 RUN addgroup -g 1000 app && adduser -u 1000 -G app -D app
 
