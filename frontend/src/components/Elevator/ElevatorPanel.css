@@ -1,0 +1,137 @@
+.elevator-panel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.elevator-panel {
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  border-radius: 16px;
+  padding: 25px;
+  min-width: 280px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.panel-header h3 {
+  color: #4cc9f0;
+  font-size: 20px;
+}
+
+.close-button {
+  background: #ff4757;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.close-button:hover {
+  background: #ff6b7a;
+}
+
+.panel-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background: #0f0f23;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.current-floor {
+  font-size: 48px;
+  font-weight: bold;
+  color: #4cc9f0;
+}
+
+.direction {
+  font-size: 32px;
+  color: #ffd93d;
+}
+
+.panel-status {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #0f0f23;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.panel-status .status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #2a2a4a;
+}
+
+.panel-status .status.moving {
+  background: #4cc9f0;
+  color: #1a1a2e;
+}
+
+.panel-status .status.door_open,
+.panel-status .status.door_opening {
+  background: #ffd93d;
+  color: #1a1a2e;
+}
+
+.panel-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.floor-button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #2a2a4a;
+  color: #888;
+  border: 2px solid #3a3a5a;
+}
+
+.floor-button:hover:not(:disabled) {
+  background: #3a3a5a;
+  color: #4cc9f0;
+  border-color: #4cc9f0;
+}
+
+.floor-button.current {
+  background: #4cc9f0;
+  color: #1a1a2e;
+  border-color: #4cc9f0;
+}
+
+.floor-button.selected {
+  background: #ffd93d;
+  color: #1a1a2e;
+  border-color: #ffd93d;
+}
+
+.panel-destinations {
+  margin-top: 15px;
+  padding: 10px;
+  background: #0f0f23;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}

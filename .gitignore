@@ -1,0 +1,77 @@
+################################
+# OS
+################################
+.DS_Store
+Thumbs.db
+
+################################
+# IDE (IntelliJ / VS Code)
+################################
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+################################
+# Java / Maven
+################################
+target/
+*/target/
+.mvn/wrapper/maven-wrapper.jar
+*.log
+
+################################
+# Node / Frontend (Vite / React / TS)
+################################
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+
+################################
+# TypeScript
+################################
+*.tsbuildinfo
+
+################################
+# Environment variables
+################################
+.env
+.env.*
+!.env.example
+
+################################
+# Docker
+################################
+docker-compose.override.yml
+**/docker-compose.override.yml
+
+################################
+# Nginx
+################################
+nginx/logs/
+nginx/cache/
+
+################################
+# Tests / Coverage
+################################
+coverage/
+.nyc_output/
+
+################################
+# Temporary files
+################################
+tmp/
+temp/
+*.swp
+*.swo
+*.bak
+
+################################
+# Build artifacts (safety net)
+################################
+*.jar
+*.war
+*.ear

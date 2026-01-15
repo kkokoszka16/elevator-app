@@ -1,0 +1,47 @@
+server:
+  port: 8080
+  shutdown: graceful
+
+spring:
+  application:
+    name: elevator-system
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+
+elevator:
+  system:
+    default-floors: 10
+    default-elevators: 3
+    door-open-duration-seconds: 3
+    floor-travel-duration-seconds: 2
+    tick-interval-ms: 1000
+    requests-per-minute: 100
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: always
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+    tagsSorter: alpha
+
+logging:
+  level:
+    com.elevator: INFO
+    org.springframework.web.socket: INFO
